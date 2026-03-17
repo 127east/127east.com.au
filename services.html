@@ -964,6 +964,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:var(--nav);background
 .sv-stats-in .sv-stat:first-child{padding-left:var(--pad);}
 .sv-grid .sv-card:nth-child(odd){padding-left:var(--pad);}
 .sv-grid .sv-card:nth-child(even){padding-right:var(--pad);}
+
+/* ── PORTRAIT MOBILE HERO FIX ── */
+@media(max-width:900px){
+  /* Homepage hero: stack headline over right col */
+  .hero-top{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .hero-right{width:100%;text-align:left;}
+  .hero-right p{max-width:100%;}
+
+  /* Inner page heroes: stack too */
+  .pg-hero-in{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .pg-hero-in.full{grid-template-columns:1fr;}
+
+  /* Services hero */
+  .sv-hero-in{padding:72px var(--pad) 56px;}
+
+  /* Service detail hero */
+  .sd-hero-in{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+}
 </style>
 </head>
 <body>
